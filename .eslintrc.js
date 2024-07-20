@@ -2,7 +2,7 @@ module.exports = {
   // 指定 ESLint 的解析器和解析器选项
   parser: '@typescript-eslint/parser',
   parserOptions: {
-    ecmaVersion: 2021,
+    ecmaVersion: 'latest',
     sourceType: 'module',
     ecmaFeatures: {
       jsx: true,
@@ -32,43 +32,12 @@ module.exports = {
   plugins: ['prettier', '@typescript-eslint', 'react', 'react-hooks'],
   // 指定ESLint规则及其配置
   rules: {
-    // JavaScript rules
-    'prefer-const': 'warn',
-    'no-var': 'warn',
-    'no-unused-vars': 'warn',
-    'object-shorthand': 'warn',
-    'quote-props': ['warn', 'as-needed'],
-    // TypeScript rules
-    '@typescript-eslint/array-type': [
-      'warn',
-      {
-        default: 'array',
-      },
-    ],
-    '@typescript-eslint/consistent-type-assertions': [
-      'warn',
-      {
-        assertionStyle: 'as',
-        objectLiteralTypeAssertions: 'never',
-      },
-    ],
-    // React rules
-    'react/jsx-fragments': ['warn', 'syntax'], // Shorthand syntax for React fragments
-    'react/jsx-filename-extension': [
-      'warn',
-      {
-        extensions: ['ts', 'tsx'],
-      },
-    ],
-    'react-hooks/rules-of-hooks': 'error', // Checks rules of Hooks
-    'react-hooks/exhaustive-deps': 'warn', // Checks effect dependencies
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
-    'prettier/prettier': 'warn',
   },
   settings: {
     react: {
       version: 'detect',
     },
   },
-};
+}

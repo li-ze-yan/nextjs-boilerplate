@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+    "lint:fix": "pnpm lint --fix",
     "format": "prettier --cache --ignore-path .eslintignore --write ./",
     "prepare": "husky"
   },
@@ -25,6 +26,7 @@
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
     "husky": "^9.1.1",
     "lint-staged": "^15.2.7",
     "postcss": "^8",
