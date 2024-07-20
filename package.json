@@ -1,38 +1,53 @@
 {
-  "name": "next-cli",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
-    "lint:fix": "pnpm lint --fix",
-    "format": "prettier --cache --ignore-path .eslintignore --write ./",
-    "prepare": "husky init"
-  },
-  "dependencies": {
-    "next": "14.2.5",
-    "react": "^18",
-    "react-dom": "^18"
-  },
-  "devDependencies": {
-    "@types/node": "^20",
-    "@types/react": "^18",
-    "@types/react-dom": "^18",
-    "@typescript-eslint/eslint-plugin": "^7.16.1",
-    "@typescript-eslint/parser": "^7.16.1",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.5",
-    "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.2.1",
-    "eslint-plugin-react-hooks": "^4.6.2",
-    "husky": "^9.1.1",
-    "lint-staged": "^15.2.7",
-    "postcss": "^8",
-    "prettier": "^3.3.3",
-    "prettier-plugin-tailwindcss": "^0.6.5",
-    "tailwindcss": "^3.4.1",
-    "typescript": "^5"
-  }
+	"name": "next-cli",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "eslint --ignore-path .gitignore --cache --cache-location ./node_modules/.cache/eslint .",
+		"lint:fix": "pnpm lint --fix",
+		"format": "prettier --cache --ignore-path .eslintignore --write ./",
+		"prepare": "husky init",
+		"commit": "git-cz"
+	},
+	"config": {
+		"commitizen": {
+			"path": "node_modules/cz-customizable"
+		},
+		"cz-customizable": {
+			"config": ".cz-config.cjs"
+		}
+	},
+	"dependencies": {
+		"next": "14.2.5",
+		"react": "^18",
+		"react-dom": "^18"
+	},
+	"devDependencies": {
+		"@commitlint/cli": "^19.3.0",
+		"@commitlint/config-conventional": "^19.2.2",
+		"@types/node": "^20",
+		"@types/react": "^18",
+		"@types/react-dom": "^18",
+		"@typescript-eslint/eslint-plugin": "^7.16.1",
+		"@typescript-eslint/parser": "^7.16.1",
+		"commitizen": "^4.3.0",
+		"commitlint-config-cz": "^0.13.3",
+		"cz-conventional-changelog": "^3.3.0",
+		"cz-customizable": "^7.2.1",
+		"eslint": "^8.57.0",
+		"eslint-config-next": "14.2.5",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-prettier": "^5.2.1",
+		"eslint-plugin-react-hooks": "^4.6.2",
+		"husky": "^9.1.1",
+		"lint-staged": "^15.2.7",
+		"postcss": "^8",
+		"prettier": "^3.3.3",
+		"prettier-plugin-tailwindcss": "^0.6.5",
+		"tailwindcss": "^3.4.1",
+		"typescript": "^5"
+	}
 }
