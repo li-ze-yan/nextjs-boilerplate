@@ -16,6 +16,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   // const [fuck, setFuck] = useState([])
+  // const [shit, setShit] = useState([])
   return (
     <html lang="en">
       <body className={inter.className}>{children}</body>
